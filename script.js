@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Configuration ---
     const imagePaths = [
         'images/weekly_picture.png',
-        'images/weekly_picture1.png'
-        //'images/image2.png',
+        'images/weekly_picture1.png',
+        'images/weekly_picture2.png',
         //'images/image3.gif',
         // Add all your image paths here
         // e.g., 'images/my-awesome-pic.jpeg',
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const textContent = await response.text();
             const textLines = textContent.split('\n').map(line => line.trim()).filter(line => line.length > 0);
             if (textLines.length > 0) {
-                dynamicText.textContent = getRandomItem(textLines);
+                dynamicText.textContent = 'You are a reporter, writing a story with the title "' + getRandomItem(textLines) + '".';
             } else {
                 dynamicText.textContent = "No messages found in the text file.";
             }

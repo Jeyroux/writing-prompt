@@ -15,6 +15,13 @@
             margin: 0;
             background-color: #f0f0f0;
         }
+
+        p {
+        font-size: 1.5em;
+        color: #555;
+        /*text-align: left;*/
+        padding: 0 20px;
+        }
         #dynamic-image {
             max-width: 80%;
             max-height: 400px;
@@ -22,17 +29,19 @@
             margin-bottom: 20px;
             object-fit: contain; /* Ensures image fits within bounds without cropping */
         }
-        #dynamic-text {
-            font-size: 1.5em;
-            color: #555;
-            text-align: center;
-            padding: 0 20px;
-        }
+        
     </style>
 </head>
+<p>Hello, in this project I have made a simple website which can be hosted on GitHub Pages. This project copies a writing prompt template from a local writing group. When the page is refreshed, it changes what image and "reporter" prompt is shown on the website. Enjoy!</p>
 <body>
-    <img id="dynamic-image" src="" alt="Dynamic Image">
+    <p>Welcome to newcomers! On Thursdays I send out the exercises as below. On Tuesdays, we read our work out to each other in the class. You can choose to pass and not read if you wish. After each exercise, we comment on each others' work and discuss the following: “What do our works have in common, and what makes them different from each other?", and " “What different styles of writing have been used?</p>
+    <p><b>Exercise 1:</b></p>
     <p id="dynamic-text"></p>
+    <p>Write a story which fits that title, limiting yourself to a maximum of 250 words.</p>
+    <p><b>Exercise 2:</b></p>
+    <p>Explain this photograph. What was happening here? Who is involved, and what are they thinking? Why did the photographer take the photo?</p>
+    <p>Write a story about this photo, limiting yourself to 6 minutes of writing time.</p>
+    <img id="dynamic-image" src="" alt="Dynamic Image">
 
     <script src="script.js"></script>
 </body>
