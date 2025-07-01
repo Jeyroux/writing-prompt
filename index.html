@@ -3,15 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Weekly Update</title>
+    <title>Dynamic Content Page</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 20px; }
-        img { max-width: 100%; height: auto; margin-bottom: 20px; }
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #dynamic-image {
+            max-width: 80%;
+            max-height: 400px;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+            object-fit: contain; /* Ensures image fits within bounds without cropping */
+        }
+        #dynamic-text {
+            font-size: 1.5em;
+            color: #555;
+            text-align: center;
+            padding: 0 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Weekly Message</h1>
-    <p>This is the text for this week: [Your Weekly Text Here]</p>
-    <img src="weekly_picture.png" alt="Weekly Picture">
+    <img id="dynamic-image" src="" alt="Dynamic Image">
+    <p id="dynamic-text"></p>
+
+    <script src="script.js"></script>
 </body>
 </html>
